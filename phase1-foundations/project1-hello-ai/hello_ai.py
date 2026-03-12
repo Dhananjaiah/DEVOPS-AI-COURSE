@@ -27,7 +27,7 @@ api_key = os.getenv("OPENAI_API_KEY")  # Grab the API key value from environment
                                         # If the variable doesn't exist, it returns None (empty).
 
 
-# ── Step 2: Safety check — make sure we have an API key ─────────────────────
+## ── Step 2: Safety check — make sure we have an API key ─────────────────────
 # If the user forgot to set up the .env file, we want to give them a helpful
 # error message instead of a confusing crash later.
 
