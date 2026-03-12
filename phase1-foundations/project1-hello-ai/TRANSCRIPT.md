@@ -20,15 +20,15 @@
 
 **Alex:** That does sound cool. Okay. What do we do first?
 
-**Jamie:** First, let me just give you a quick picture of what we're building today, so nothing feels mysterious. We're going to write a Python program. That program will send a message to Claude — that's Anthropic's AI — and print back the response in your terminal. Like texting a robot, but from code.
+**Jamie:** First, let me just give you a quick picture of what we're building today, so nothing feels mysterious. We're going to write a Python program. That program will send a message to an OpenAI model and print back the response in your terminal. Like texting a robot, but from code.
 
 **Alex:** When you say "terminal," do you mean the black screen thing?
 
 **Jamie:** Exactly! The black screen with the blinking cursor. On Windows it's called Command Prompt or PowerShell. On Mac it's called Terminal. Same concept — it's just a way to type commands directly to your computer instead of clicking buttons.
 
-**Alex:** Got it. And this Claude — it's like ChatGPT?
+**Alex:** Got it. And this model — it's like ChatGPT?
 
-**Jamie:** Very similar! Both are "large language models" — AI systems trained on enormous amounts of text. ChatGPT is made by OpenAI, Claude is made by Anthropic. We're using Claude because their API is well-designed and beginner-friendly. And both use the same concept: you send text in, you get text back.
+**Jamie:** Exactly. ChatGPT is the app interface, and the OpenAI API gives you model access from code. Same core idea: you send text in, you get text back.
 
 **Alex:** What's an API? I keep hearing that word.
 
@@ -36,9 +36,9 @@
 
 **Alex:** Yeah...
 
-**Jamie:** An API is the waiter. It's a middleman that lets your program talk to another service — in this case, Anthropic's AI — without you having to understand all the complicated stuff happening "in the kitchen." You send a request, the API handles everything, and you get a response back.
+**Jamie:** An API is the waiter. It's a middleman that lets your program talk to another service — in this case, OpenAI's model API — without you having to understand all the complicated stuff happening "in the kitchen." You send a request, the API handles everything, and you get a response back.
 
-**Alex:** Oh! That actually makes sense. So when I call the API, I don't need to know how Claude actually works inside?
+**Alex:** Oh! That actually makes sense. So when I call the API, I don't need to know how the model actually works inside?
 
 **Jamie:** Exactly. You don't need to understand the AI math. You just need to know how to format your request correctly — and that's what this project teaches. Alright, let's open the project folder. Can you navigate to it?
 
@@ -74,23 +74,23 @@
 
 **Jamie:** That's the sign! The `(venv)` prefix means your virtual environment is active. Now everything you install will go into that bubble. Run: `pip install -r requirements.txt`
 
-**Alex:** Running... I see a bunch of stuff scrolling. "Collecting anthropic"... "Collecting python-dotenv"... it's downloading things. This is the tools we need?
+**Alex:** Running... I see a bunch of stuff scrolling. "Collecting openai"... "Collecting python-dotenv"... it's downloading things. This is the tools we need?
 
 **Jamie:** Exactly. `pip` is Python's package manager — its job is to download and install libraries. `requirements.txt` is a list of the libraries this project needs, and `pip install -r` reads that list and installs all of them.
 
-**Alex:** Okay it finished! "Successfully installed anthropic-0.40.0 python-dotenv-1.0.0" and some other things.
+**Alex:** Okay it finished! "Successfully installed openai-1.x python-dotenv-1.0.0" and some other things.
 
 **Jamie:** Perfect! Now the most important step: your API key. We need to create the `.env` file. Copy `.env.example` to `.env`. On Windows: `copy .env.example .env`
 
 **Alex:** Done. Now I need to put my real API key in it?
 
-**Jamie:** Yes. Go to `console.anthropic.com`, sign up or log in, click "API Keys" in the sidebar, create a new key, copy it — and paste it into the `.env` file replacing the placeholder text.
+**Jamie:** Yes. Go to `platform.openai.com/api-keys`, sign up or log in, create a new key, copy it — and paste it into the `.env` file replacing the placeholder text.
 
 **Alex:** Okay... I'm at the website... creating a key... it says to copy it now because I'll never see it again?
 
 **Jamie:** Right! Store it somewhere safe too, like a password manager. This is your private key — treat it like a password.
 
-**Alex:** Got it... copied... opening the `.env` file in VS Code... okay I can see `ANTHROPIC_API_KEY=sk-ant-your-key-here`. I replaced that with my real key and saved.
+**Alex:** Got it... copied... opening the `.env` file in VS Code... okay I can see `OPENAI_API_KEY=sk-proj-your-key-here`. I replaced that with my real key and saved.
 
 **Jamie:** Great! Now let's look at the code before we run it. Open `hello_ai.py`. Read through the comments. What does line 1 say?
 
@@ -104,11 +104,11 @@
 
 **Alex:** Okay I read through it... I think I understand most of it. The part where it says `messages=[{"role": "user", "content": my_question}]` — what's that square bracket thing?
 
-**Jamie:** That's a Python list. A list is an ordered collection of items, wrapped in square brackets `[ ]`. Inside the list, each item is a dictionary — curly braces `{ }` with key-value pairs. So you have a list containing one dictionary. The dictionary has two keys: `"role"` and `"content"`. This is the format the Anthropic API expects.
+**Jamie:** That's a Python list. A list is an ordered collection of items, wrapped in square brackets `[ ]`. Inside the list, each item is a dictionary — curly braces `{ }` with key-value pairs. So you have a list containing one dictionary. The dictionary has two keys: `"role"` and `"content"`. This is the format the OpenAI chat API expects.
 
 **Alex:** Why does it need a list? We're only sending one message.
 
-**Jamie:** Great observation! The API is designed for multi-turn conversations. In a real chatbot, you'd have a history of messages — user says something, Claude responds, user says something else, Claude responds again. All of those would be in the list. For our simple case, we only have one message, but it still needs to be in list format because that's what the API expects.
+**Jamie:** Great observation! The API is designed for multi-turn conversations. In a real chatbot, you'd have a history of messages — user says something, the assistant responds, user says something else, assistant responds again. All of those would be in the list. For our simple case, we only have one message, but it still needs to be in list format because that's what the API expects.
 
 **Alex:** Oh that makes sense! Okay, I think I'm ready. Can I just run it?
 
@@ -118,7 +118,7 @@
 
 **[5 second pause]**
 
-**Alex:** OH WOW! It printed stuff! Let me read... "API key loaded successfully!"... "Sending message to Claude..."... and then — holy cow — Claude actually answered! It says: "An AI agent is like a really smart helper that can think on its own and do tasks for you, like searching the internet, writing emails, or solving problems step by step. You give it a goal, and it figures out how to reach that goal all by itself without you having to tell it every tiny thing to do!"
+**Alex:** OH WOW! It printed stuff! Let me read... "API key loaded successfully!"... "Sending message to OpenAI..."... and then — holy cow — the model actually answered! It says: "An AI agent is like a really smart helper that can think on its own and do tasks for you, like searching the internet, writing emails, or solving problems step by step. You give it a goal, and it figures out how to reach that goal all by itself without you having to tell it every tiny thing to do!"
 
 **Jamie:** [laughs] Welcome to AI engineering! How does it feel?
 
@@ -132,23 +132,23 @@
 
 **Alex:** Um... because it costs money? Like, that's how they charge you?
 
-**Jamie:** Exactly right. Anthropic charges per token used. Knowing the token count helps you estimate costs. If you built a customer support bot that answers 10,000 questions per day, you'd want to know roughly how many tokens each answer uses so you can budget correctly.
+**Jamie:** Exactly right. OpenAI charges per token used. Knowing the token count helps you estimate costs. If you built a customer support bot that answers 10,000 questions per day, you'd want to know roughly how many tokens each answer uses so you can budget correctly.
 
 **Alex:** Makes sense. So if I changed `max_tokens` to something really small, what would happen?
 
-**Jamie:** Try it! Change `max_tokens=1024` to `max_tokens=10` and run it again.
+**Jamie:** Try it! Change `max_tokens=300` to `max_tokens=10` and run it again.
 
 **Alex:** Changing it... running... oh! The answer got cut off super short! It just says "An AI agent is like a really smart" and then it stopped.
 
-**Jamie:** Perfect experiment! You just proved that `max_tokens` is a hard cap. The model stops generating the moment it hits that limit, even mid-sentence. Change it back to 1024 for the final version.
+**Jamie:** Perfect experiment! You just proved that `max_tokens` is a hard cap. The model stops generating the moment it hits that limit, even mid-sentence. Change it back to 300 for the final version.
 
 **Alex:** Done. Okay, let me ask you something — what if I forget to activate the virtual environment before running?
 
 **Jamie:** Try it! Open a NEW terminal tab (don't close your current one), navigate to the project folder WITHOUT activating venv, and try `python hello_ai.py`.
 
-**Alex:** Okay, new terminal... going to the folder... running without activating... it says: `ModuleNotFoundError: No module named 'anthropic'`
+**Alex:** Okay, new terminal... going to the folder... running without activating... it says: `ModuleNotFoundError: No module named 'openai'`
 
-**Jamie:** There it is! Classic error. It can't find the `anthropic` library because you installed it INSIDE the venv, but this terminal session doesn't know about the venv. To fix it, you just activate the venv first. Go back to your other terminal where `(venv)` is showing and it works fine there.
+**Jamie:** There it is! Classic error. It can't find the `openai` library because you installed it INSIDE the venv, but this terminal session doesn't know about the venv. To fix it, you just activate the venv first. Go back to your other terminal where `(venv)` is showing and it works fine there.
 
 **Alex:** Oh I see! The venv is like... it only exists in the terminal where you activated it?
 
@@ -172,7 +172,7 @@
 
 **Alex:** It would crash eventually, but with a more confusing error. Like maybe it would get to the API call part and fail there with some weird message.
 
-**Jamie:** Exactly! Without the early check, the error would happen deep inside the `anthropic` library with a less helpful error message. Our check makes it fail fast with a clear, human-friendly error message. That's good engineering practice. Last question: What does `[0]` mean in `response.content[0].text`?
+**Jamie:** Exactly! Without the early check, the error would happen deep inside the `openai` library with a less helpful error message. Our check makes it fail fast with a clear, human-friendly error message. That's good engineering practice. Last question: What does `[0]` mean in `response.choices[0].message.content`?
 
 **Alex:** It's getting the first item from a list? Because Python counts from zero?
 
@@ -184,7 +184,7 @@
 
 **Alex:** What's next?
 
-**Jamie:** Project 2 is called "Smart Notes." You'll build a command-line tool that takes notes or text files and summarizes them using Claude. You'll learn about system prompts — which let you give Claude a "personality" or role — and about argparse, which lets users control your program with command-line flags like `python smart_notes.py --file my_notes.txt`. These are concepts used in real production CLI tools at companies.
+**Jamie:** Project 2 is called "Smart Notes." You'll build a command-line tool that takes notes or text files and summarizes them using an OpenAI model. You'll learn about system prompts — which let you define the assistant's role and tone — and about argparse, which lets users control your program with command-line flags like `python smart_notes.py --file my_notes.txt`. These are concepts used in real production CLI tools at companies.
 
 **Alex:** Ooh, that sounds useful. Like I could actually use that for my own notes!
 
@@ -199,7 +199,8 @@
 **[End of Session]**
 
 **Session Summary:**
-- Covered: virtual environments, API keys, `.env` files, imports, the Anthropic API call structure, tokens, f-strings, list indexing
+- Covered: virtual environments, API keys, `.env` files, imports, the OpenAI API call structure, tokens, f-strings, list indexing
 - Common errors encountered: PowerShell execution policy, ModuleNotFoundError from missing venv activation
 - Student confidence level: Started at 4/10, ended at 7/10
 - Next session: Project 2 — Smart Notes (system prompts, argparse, CLI tools)
+
