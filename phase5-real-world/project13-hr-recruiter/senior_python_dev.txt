@@ -1,0 +1,67 @@
+JOB TITLE: Senior Python Developer
+COMPANY: TechCorp Inc.
+LOCATION: San Francisco, CA (Hybrid — 3 days in office)
+SALARY RANGE: $140,000 - $165,000 + equity + benefits
+DEPARTMENT: Platform Engineering
+
+ABOUT THE ROLE
+We are looking for a Senior Python Developer to join our Platform Engineering team.
+You will design and build the core infrastructure that powers our SaaS products used by
+500,000+ customers worldwide. This is a high-impact, high-ownership role where your work
+will directly affect millions of users.
+
+MINIMUM REQUIREMENTS (Must Have)
+- 5+ years of professional Python development experience
+- Strong experience building production REST APIs (FastAPI or Django REST Framework)
+- Expert-level understanding of async Python, concurrency, and performance optimization
+- Experience with cloud platforms (AWS preferred, GCP or Azure acceptable)
+- Proficiency with SQL databases (PostgreSQL) and NoSQL (Redis, MongoDB)
+- Experience with Docker, Kubernetes, and CI/CD pipelines
+- Strong computer science fundamentals (algorithms, data structures, system design)
+- Experience with unit testing, integration testing, and TDD practices
+- Bachelor's degree in Computer Science or equivalent practical experience
+
+PREFERRED QUALIFICATIONS (Nice to Have)
+- Experience with distributed systems and microservices architecture
+- Familiarity with AI/ML frameworks (LangChain, TensorFlow, PyTorch)
+- Open source contributions or public GitHub projects
+- Experience leading or mentoring other developers
+- AWS certifications (Solutions Architect or Developer)
+- Experience with event streaming (Kafka, RabbitMQ)
+
+KEY RESPONSIBILITIES
+- Design, implement, and maintain high-performance Python backend services
+- Lead technical design discussions and architecture decisions for major features
+- Mentor junior and mid-level engineers through code reviews and pair programming
+- Collaborate with product managers to translate requirements into technical designs
+- Improve system reliability, scalability, and performance
+- Write comprehensive tests and maintain high code quality standards
+- Participate in on-call rotation (approximately 1 week per quarter)
+- Contribute to technical roadmap planning
+
+WHAT WE OFFER
+- Competitive salary: $140K - $165K depending on experience
+- Meaningful equity package in a Series B company
+- Full health, dental, and vision insurance (100% premium covered)
+- 401(k) with 4% company match
+- $5,000/year learning and development budget
+- Home office setup stipend ($1,500)
+- 4 weeks PTO + company holidays
+- Flexible hybrid work schedule
+
+OUR TECH STACK
+- Backend: Python (FastAPI, SQLAlchemy), Go for performance-critical services
+- Infrastructure: AWS (EKS, RDS, Lambda, S3), Terraform
+- Data: PostgreSQL, Redis, Elasticsearch, Kafka
+- Observability: Datadog, PagerDuty
+- CI/CD: GitHub Actions, ArgoCD
+
+INTERVIEW PROCESS
+1. Initial screen with HR (30 minutes)
+2. Technical phone screen with senior engineer (45 minutes)
+3. Take-home coding challenge (3 hours)
+4. Virtual onsite: system design + coding + culture fit (4 hours total)
+5. Reference checks and offer
+
+We are an equal opportunity employer committed to building a diverse and inclusive team.
+We encourage candidates from all backgrounds to apply.

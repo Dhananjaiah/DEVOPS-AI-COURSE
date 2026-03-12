@@ -1,0 +1,51 @@
+MARCUS JOHNSON
+Email: marcus.j@gmail.com | Phone: (312) 555-0847
+LinkedIn: linkedin.com/in/marcusjohnson
+
+SUMMARY
+Python developer with 3 years of experience. Worked on backend systems and REST APIs.
+Looking for a senior role to grow my skills and take on more responsibility.
+
+SKILLS
+Programming: Python, JavaScript, SQL, some Java
+Frameworks: Django, Flask, basic FastAPI experience
+Cloud: AWS (EC2, S3 basics), basic Docker knowledge
+Databases: MySQL, PostgreSQL, MongoDB basics
+Tools: Git, VS Code, Postman, JIRA
+
+EXPERIENCE
+
+Software Developer — Midwest Tech Solutions, Chicago, IL (2022 - Present)
+- Developed REST APIs using Python/Django for internal business applications
+- Maintained and improved legacy codebase with 200K+ lines of Python code
+- Fixed bugs and added features to e-commerce platform serving 50K monthly users
+- Wrote unit tests increasing coverage from 40% to 65%
+- Collaborated with frontend team of 3 developers on project requirements
+- Technologies: Python, Django, MySQL, AWS EC2, S3
+
+Junior Developer — WebAgency Co., Chicago, IL (2021 - 2022)
+- Built small web applications for local business clients using Python/Flask
+- Created database schemas and wrote SQL queries for reporting features
+- Participated in daily standups and weekly sprint reviews
+- Technologies: Python, Flask, SQLite, basic HTML/CSS
+
+Intern — DataStart Inc., Chicago, IL (Summer 2020)
+- Wrote Python scripts to automate data cleaning tasks
+- Created basic data visualizations using matplotlib
+- Shadowed senior engineers and attended code review sessions
+
+EDUCATION
+B.S. Computer Science, University of Illinois Chicago — 2021
+GPA: 3.1/4.0
+
+CERTIFICATIONS
+- AWS Cloud Practitioner (2023) — entry level cert
+- Python Institute PCEP (2021)
+
+PROJECTS
+- Personal blog built with Django and PostgreSQL (hobby project)
+- Scraped job listings with Python and BeautifulSoup for personal use
+- Built a simple REST API for a to-do list application
+
+REFERENCES
+Available upon request

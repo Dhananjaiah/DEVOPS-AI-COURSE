@@ -1,0 +1,69 @@
+Acme Technologies Inc. — Employee Policy Handbook
+Last Updated: January 2026
+Human Resources Department
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1: REMOTE WORK POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acme Technologies supports flexible work arrangements that allow employees to balance professional responsibilities with personal needs while maintaining high standards of productivity and collaboration.
+
+Eligibility: Full-time employees who have completed their 90-day probationary period are eligible to request remote work arrangements. Part-time employees and contractors are eligible for remote work at the discretion of their direct manager.
+
+Remote Work Days: Employees in engineering, design, and marketing roles may work remotely up to 4 days per week. Employees in sales, operations, and customer success roles may work remotely up to 2 days per week, as these roles benefit from in-person collaboration. All employees are required to be present in the office on Tuesdays, which is designated as the company-wide in-person collaboration day.
+
+Home Office Requirements: Employees who work remotely are responsible for maintaining a dedicated, professional workspace. The company will provide a one-time home office stipend of $500 for full-time employees to purchase equipment such as a monitor, keyboard, or ergonomic chair. Receipts must be submitted through the expense portal within 90 days of the stipend approval.
+
+Availability: Remote employees must be available and responsive during core business hours of 9:00 AM to 4:00 PM in their local time zone. Employees must have their video camera on during team meetings unless they have prior approval from their manager due to a technical issue or personal circumstance.
+
+Internet and Security: Employees are required to use a secure, password-protected internet connection while working remotely. The use of public Wi-Fi in coffee shops, airports, or other public spaces is prohibited when accessing company systems. Employees must connect through the company VPN for any work involving internal tools or customer data.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2: VACATION AND TIME OFF POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acme Technologies believes that time away from work is essential for employee wellbeing, creativity, and long-term performance.
+
+Annual Vacation Days: Full-time employees receive 20 paid vacation days per calendar year. Employees with more than 5 years of service receive 25 days. Employees with more than 10 years of service receive 30 days. Vacation days are front-loaded at the start of each calendar year.
+
+Vacation Carryover: Employees may carry over a maximum of 10 unused vacation days from one calendar year to the next. Any unused days above 10 will be forfeited on January 31st of the following year. The company does not pay out unused vacation days unless the employee is leaving the company.
+
+Requesting Time Off: Vacation requests must be submitted in the HR portal at least 5 business days in advance for absences of 3 days or fewer. Absences of 4 days or more require at least 3 weeks of advance notice. Requests during the December holiday period (December 20–January 2) must be submitted by October 1 due to high demand. All requests are subject to manager approval based on business needs.
+
+Sick Leave: Employees receive 10 paid sick days per year. Sick days do not carry over and are separate from vacation days. Employees are not required to find coverage for their responsibilities when calling in sick. For illnesses lasting more than 3 consecutive days, a doctor's note may be requested by HR.
+
+Public Holidays: Acme observes 11 federal public holidays per year. If a public holiday falls on a weekend, it will be observed on the nearest weekday. The full list of observed holidays is published on the company intranet in November each year for the following calendar year.
+
+Bereavement Leave: Employees are entitled to up to 5 paid bereavement days for the death of an immediate family member (spouse, child, parent, sibling). Up to 3 days are provided for the death of an extended family member (grandparent, aunt, uncle, in-law).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3: EXPENSE REIMBURSEMENT POLICY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acme Technologies reimburses employees for reasonable business expenses incurred in the course of their work. All expenses must have a legitimate business purpose and be approved before or promptly after being incurred.
+
+Travel Expenses: For business travel, employees should book flights at least 14 days in advance to obtain reasonable fares. Economy class is required for domestic flights and flights under 6 hours. Business class may be approved for international flights over 8 hours with manager and finance approval. Hotel accommodations should not exceed $200 per night in major cities and $150 per night in other locations, unless no options are available within that range.
+
+Meals and Entertainment: Daily meal allowances for business travel are: $15 for breakfast, $20 for lunch, $40 for dinner. Client entertainment meals require prior approval from a director or above and must include a receipt and a brief description of the business purpose. Alcohol is reimbursable only for approved client entertainment and is limited to 20% of the total meal cost.
+
+Equipment and Software: Equipment purchases over $100 require pre-approval from the employee's manager. Software subscriptions must be approved by both the manager and the IT department to ensure compliance with security requirements. Personal devices used for work are not reimbursable unless specifically pre-approved.
+
+Submission Deadlines: All expense reports must be submitted within 30 days of the expense being incurred. Receipts are required for all expenses over $25. Expenses submitted after 60 days may not be reimbursed. Expense reports are submitted through the Concur expense management system accessible via the employee portal.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4: CODE OF CONDUCT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Acme Technologies is committed to maintaining a professional, inclusive, and respectful workplace for all employees, contractors, clients, and partners.
+
+Respectful Workplace: All employees are expected to treat colleagues, clients, and partners with dignity and respect at all times. Harassment, bullying, discrimination, or any form of hostile behavior based on race, gender, age, religion, disability, sexual orientation, or any other protected characteristic will not be tolerated and may result in immediate termination.
+
+Confidentiality: Employees have access to confidential information including customer data, product plans, financial data, and business strategies. Sharing confidential information with unauthorized parties — including on personal social media, in public conversations, or with former employees — is a serious violation that may result in termination and legal action. Confidentiality obligations continue for 2 years after an employee leaves the company.
+
+Conflicts of Interest: Employees must disclose any personal financial interest in vendors, clients, or competitors. Employees may not work for a direct competitor while employed at Acme. Side projects or consulting work must be disclosed to HR if they involve technologies or markets related to Acme's business.
+
+Technology Use: Company devices and accounts are to be used primarily for business purposes. Moderate personal use of the internet during working hours is acceptable provided it does not interfere with work performance. Accessing inappropriate, illegal, or harmful content on company devices or networks is strictly prohibited.
+
+Reporting Violations: Employees who observe violations of this code of conduct are encouraged to report them to HR or to the anonymous ethics hotline available on the company intranet. Retaliation against employees who report violations in good faith is strictly prohibited.
+
+Disciplinary Process: Policy violations are handled through a progressive disciplinary process: verbal warning, written warning, final written warning, and termination. Serious violations including theft, fraud, harassment, or security breaches may result in immediate termination without the progressive steps.

@@ -1,0 +1,64 @@
+TechCorp X1 Device
+User Manual and Technical Reference Guide
+Model: X1-2026 | Firmware: v4.2.1
+
+WELCOME TO TECHCORP X1
+
+Thank you for purchasing the TechCorp X1 Device, our most advanced productivity terminal designed for professionals who demand performance and reliability. The X1 combines a powerful quad-core ARM processor with TechCorp's proprietary CloudSync technology to give you seamless access to your work from anywhere.
+
+SECTION 1: WHAT'S IN THE BOX
+
+Your TechCorp X1 package includes:
+- TechCorp X1 Device (Model X1-2026)
+- 65W USB-C Power Adapter with regional adapters (US, EU, UK, AU)
+- USB-C to USB-C Cable (2 meters)
+- USB-C to USB-A Adapter
+- HDMI to USB-C Adapter
+- Quick Start Guide (printed)
+- Warranty Card
+- Microfiber Cleaning Cloth
+
+Note: Mouse and keyboard are sold separately. The X1 is compatible with any USB or Bluetooth input device.
+
+SECTION 2: TECHNICAL SPECIFICATIONS
+
+Processor: TechCorp Helix Quad-Core 3.2 GHz (ARM architecture)
+Memory: 16 GB LPDDR5 RAM (non-upgradeable)
+Storage: 512 GB NVMe SSD (expandable via USB-C)
+Display Output: Up to 4K at 60Hz via USB-C or HDMI adapter; supports up to 3 external monitors
+Connectivity: Wi-Fi 6E (802.11ax), Bluetooth 5.3, 4x USB-C (USB 3.2 Gen 2), 2x USB-A (USB 3.0)
+Operating System: TechCorp OS 6.0 (Linux-based) with optional Windows 11 compatibility mode
+Battery: Not applicable (desktop device, requires constant power)
+Dimensions: 180mm x 180mm x 40mm
+Weight: 1.2 kg
+
+SECTION 3: GETTING STARTED
+
+3.1 Initial Setup
+Connect the 65W USB-C power adapter to the port labeled "PWR" on the rear of the device. Connect your monitor using the included HDMI adapter or directly via USB-C. Connect a keyboard and mouse via USB or Bluetooth. Press the power button (circular button on the top of the device). The setup wizard will guide you through language selection, Wi-Fi configuration, and TechCorp account login.
+
+3.2 TechCorp Account Setup
+The X1 requires a TechCorp account (free) for initial setup. If you don't have an account, visit account.techcorp.com to create one. Your TechCorp account connects to TechCorp Cloud, enabling automatic backup of your documents and settings. Premium TechCorp Cloud subscribers (TechCorp Cloud Pro, $9.99/month) receive 2TB of storage and priority sync.
+
+3.3 Connecting to TechCorp Suite
+TechCorp Suite productivity software is pre-installed on the X1. Launch it from the application menu. Sign in with your TechCorp account credentials. Suite applications include: TechDoc (word processor), TechSheet (spreadsheet), TechSlide (presentations), TechMail (email client), and TechCalendar.
+
+SECTION 4: COMMON TROUBLESHOOTING
+
+4.1 Device Won't Power On
+Check that the power adapter is properly connected to both the device and the wall outlet. Verify the wall outlet is working (test with another device). Ensure you are using the included 65W adapter — lower wattage adapters may not provide sufficient power. Hold the power button for 10 seconds to perform a forced restart. If the device still does not power on, contact TechCorp Support.
+
+4.2 Display Issues
+If no image appears on the monitor, check all cable connections. Try a different cable or port. Verify the monitor is set to the correct input source. The X1 supports up to 4K at 60Hz — if your monitor shows a "signal out of range" error, connect a keyboard and press Ctrl+Alt+F2 to reset to 1080p mode. For multi-monitor setups, connect monitors before powering on the X1.
+
+4.3 Wi-Fi Connectivity Problems
+Navigate to Settings > Network to view available networks. If Wi-Fi is not detecting any networks, try toggling Wi-Fi off and on. Check that your router is operating on a supported frequency (2.4 GHz, 5 GHz, or 6 GHz). Factory reset the network settings from Settings > Network > Reset Network Settings. If problems persist, use the Ethernet adapter (sold separately) as a temporary workaround.
+
+4.4 Performance Issues
+If the device feels slow, check running applications in the Task Manager (Ctrl+Shift+Esc). Close unused applications. If storage is above 90% full, delete or move files to TechCorp Cloud. Run the TechCorp Optimizer from Settings > System > Optimize. A full system restart often resolves temporary performance issues.
+
+SECTION 5: WARRANTY AND SUPPORT
+
+The TechCorp X1 comes with a 2-year limited warranty covering manufacturing defects. Physical damage, water damage, and damage from unauthorized modifications are not covered. To file a warranty claim, visit warranty.techcorp.com or call 1-800-TECHCORP. For technical support, visit support.techcorp.com for live chat (available 24/7 for Premium support customers) or community forums. TechCorp support phone hours are Monday–Friday, 8:00 AM to 8:00 PM Eastern Time.
+
+Firmware updates are delivered automatically over Wi-Fi. To check for updates manually: Settings > System > Software Update. TechCorp recommends enabling automatic updates to ensure you receive the latest security patches and performance improvements.

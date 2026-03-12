@@ -1,0 +1,56 @@
+ALEXANDRA CHEN
+Email: alexandra.chen@email.com | Phone: (415) 555-0192
+LinkedIn: linkedin.com/in/alexchen-dev | GitHub: github.com/alexchen
+
+PROFESSIONAL SUMMARY
+Senior Python Developer with 8 years of experience building scalable backend systems and data pipelines.
+Proven track record at FAANG companies. Expert in distributed systems, cloud architecture, and team leadership.
+Passionate about clean code, system design, and mentoring junior developers.
+
+TECHNICAL SKILLS
+Languages: Python (Expert), Go, TypeScript, SQL
+Frameworks: FastAPI, Django, Flask, LangChain, SQLAlchemy
+Cloud & DevOps: AWS (Lambda, ECS, RDS, S3), Docker, Kubernetes, Terraform, CI/CD
+Databases: PostgreSQL, Redis, MongoDB, Elasticsearch, ChromaDB
+AI/ML: LangChain, LangGraph, OpenAI API, Anthropic API, scikit-learn, PyTorch
+Tools: Git, JIRA, Datadog, PagerDuty, Grafana
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer — Google, Mountain View, CA (2021 - Present)
+- Architected and led development of a distributed data processing system handling 2M+ events/day
+- Built Python microservices reducing system latency by 40% using async/await patterns
+- Led a team of 5 engineers, conducting code reviews and technical design sessions
+- Mentored 3 junior engineers who were all promoted within 12 months
+- Implemented ML pipeline using Python + TensorFlow for ad ranking, improving CTR by 12%
+- Technologies: Python, Go, Kubernetes, GCP, BigQuery, Pub/Sub
+
+Software Engineer — Stripe, San Francisco, CA (2019 - 2021)
+- Developed payment processing APIs in Python handling $50M+ in daily transactions
+- Reduced payment failure rate from 2.3% to 0.8% by implementing intelligent retry logic
+- Built automated testing framework increasing test coverage from 60% to 95%
+- Collaborated with security team to implement PCI-DSS compliant data handling
+- Technologies: Python, Ruby, PostgreSQL, Redis, AWS
+
+Software Engineer — Lyft, San Francisco, CA (2017 - 2019)
+- Built real-time ride matching algorithms in Python processing 100K+ concurrent users
+- Implemented geospatial query optimization reducing database load by 35%
+- Developed internal tooling that saved engineering team 20+ hours/week
+- Technologies: Python, Django, PostgreSQL, Cassandra, Kafka
+
+EDUCATION
+B.S. Computer Science, Stanford University — 2017
+GPA: 3.8/4.0 | Dean's List all 4 years
+
+CERTIFICATIONS
+- AWS Solutions Architect Professional (2023)
+- Google Cloud Professional Data Engineer (2022)
+- Certified Kubernetes Administrator (CKA) — 2021
+
+OPEN SOURCE & PROJECTS
+- LangChain contributor: merged 12 PRs, 800+ GitHub stars on personal projects
+- Built open-source FastAPI template used by 2,000+ developers
+- Speaker at PyCon 2023: "Building Production-Grade Python APIs"
+
+LANGUAGES
+English (Native), Mandarin (Fluent)

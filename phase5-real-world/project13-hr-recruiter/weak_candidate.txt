@@ -1,0 +1,44 @@
+DEREK SMITH
+Email: derek_smith99@hotmail.com | Phone: (555) 123-4567
+
+OBJECTIVE
+I want to get a job as a Python developer. I have been learning Python for about 6 months and
+I think I am ready to work professionally. I am a fast learner and work hard.
+
+SKILLS
+- Python (learning for 6 months)
+- Did a little bit of HTML/CSS
+- Microsoft Office (Word, Excel, PowerPoint)
+- Good communicator
+- Fast learner
+- Team player
+
+EXPERIENCE
+
+Barista — Starbucks, Cincinnati, OH (2020 - Present)
+- Made coffee drinks for customers
+- Handled cash register and processed payments
+- Trained 2 new employees
+- Received Employee of the Month award in September 2022
+
+Retail Associate — Target, Cincinnati, OH (2018 - 2020)
+- Helped customers find products
+- Stocked shelves and kept store organized
+- Worked weekends and holidays
+- Good attendance record
+
+EDUCATION
+High School Diploma — Walnut Hills High School, Cincinnati, OH — 2018
+Currently taking online Python course on YouTube (in progress)
+
+PROJECTS
+- Completed a tutorial where I built a simple calculator in Python
+- Made a "Hello World" program
+- Watched some videos about Django but haven't built anything yet
+
+HOBBIES
+Gaming, watching tech YouTube videos, trying to learn coding
+
+NOTE TO HIRING MANAGER
+I know I don't have a lot of experience yet but I am very motivated and will work hard.
+I am willing to work for lower pay while I am learning. Please give me a chance!

@@ -1,0 +1,52 @@
+[
+  {
+    "company": "DataVault Analytics",
+    "contact_name": "Sarah Mitchell",
+    "contact_email": "sarah.mitchell@datavault.com",
+    "industry": "Financial Services",
+    "company_size": "500-1000",
+    "annual_budget": "$150,000-$300,000",
+    "pain_points": "Our current data pipeline crashes under high load, we are losing $50K per month in downtime, and our analytics team cannot get reports fast enough to make trading decisions. We need a scalable solution immediately.",
+    "current_solution": "Legacy on-premise Oracle database from 2015, manual ETL processes"
+  },
+  {
+    "company": "GreenLeaf Logistics",
+    "contact_name": "James Okonkwo",
+    "contact_email": "j.okonkwo@greenleaflogistics.com",
+    "industry": "Supply Chain & Logistics",
+    "company_size": "250-500",
+    "annual_budget": "$50,000-$100,000",
+    "pain_points": "We want to improve our route optimization and reduce fuel costs. Currently doing route planning manually in spreadsheets. Would be nice to have real-time tracking too.",
+    "current_solution": "Google Sheets for route planning, no dedicated logistics software"
+  },
+  {
+    "company": "Maple Dental Group",
+    "contact_name": "Dr. Patricia Huang",
+    "contact_email": "phuang@mapledentalgroup.com",
+    "industry": "Healthcare",
+    "company_size": "50-100",
+    "annual_budget": "$10,000-$25,000",
+    "pain_points": "Patient scheduling is a mess. We have too many no-shows and our receptionist spends 3 hours per day just on appointment calls.",
+    "current_solution": "Dentrix practice management software from 2019"
+  },
+  {
+    "company": "NexGen Manufacturing Corp",
+    "contact_name": "Robert Vasquez",
+    "contact_email": "rvasquez@nexgenmfg.com",
+    "industry": "Manufacturing",
+    "company_size": "2000-5000",
+    "annual_budget": "$500,000-$1,000,000",
+    "pain_points": "We are undergoing a full digital transformation initiative approved by our board. We need to modernize our entire production monitoring, quality control, and supply chain systems. We have already allocated budget and have a board-approved timeline of 18 months.",
+    "current_solution": "Mix of SAP (outdated version), custom C++ apps, and paper-based quality control"
+  },
+  {
+    "company": "Derek's Dog Walking",
+    "contact_name": "Derek Thompson",
+    "contact_email": "derek@dereksdogwalking.com",
+    "industry": "Local Services",
+    "company_size": "1-5",
+    "annual_budget": "Under $1,000",
+    "pain_points": "I want to grow my business someday. Not sure what software I need.",
+    "current_solution": "None, just text messages with customers"
+  }
+]

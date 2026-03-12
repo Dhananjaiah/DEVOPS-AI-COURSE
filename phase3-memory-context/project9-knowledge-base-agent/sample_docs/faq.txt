@@ -1,0 +1,49 @@
+TechCorp Customer FAQ
+Frequently Asked Questions — Updated February 2026
+
+GENERAL QUESTIONS
+
+Q: What products does TechCorp offer?
+A: TechCorp offers three main product lines: (1) TechCorp Suite — our productivity software bundle including TechDoc, TechSheet, TechSlide, TechMail, and TechCalendar; (2) TechCorp Cloud — our secure cloud storage and sync service available in Free (15GB), Standard ($4.99/month, 200GB), and Pro ($9.99/month, 2TB) tiers; and (3) TechCorp X1 Device — our flagship productivity hardware terminal designed for professionals.
+
+Q: How do I create a TechCorp account?
+A: Visit account.techcorp.com and click "Create Account." You'll need a valid email address and a password (minimum 12 characters, must include uppercase, number, and special character). After creating your account, verify your email address within 24 hours. Your account gives you access to TechCorp Suite (free tier), 15GB of TechCorp Cloud storage, and access to TechCorp community forums.
+
+Q: Is my data secure with TechCorp?
+A: Yes. TechCorp uses AES-256 encryption for all data at rest and TLS 1.3 for all data in transit. We are SOC 2 Type II certified and GDPR compliant. TechCorp does not sell or share customer data with third parties. You can download a copy of all your data at any time from account.techcorp.com under Privacy > Export My Data. You can also request complete account deletion from the same page.
+
+BILLING AND SUBSCRIPTIONS
+
+Q: How does billing work for TechCorp Cloud?
+A: TechCorp Cloud subscriptions are billed monthly or annually (annual billing saves 20%). Your subscription renews automatically on the same date each month or year. You can cancel at any time from account.techcorp.com under Billing > Manage Subscription. Cancellation takes effect at the end of the current billing period — you retain access until then.
+
+Q: What is TechCorp's refund policy?
+A: TechCorp offers a full refund within 30 days of purchase for any reason, no questions asked. After 30 days, refunds are evaluated case-by-case. To request a refund, contact support at support.techcorp.com or email billing@techcorp.com with your order number. Refunds are processed within 5-7 business days and returned to the original payment method.
+
+Q: Can I switch between subscription plans?
+A: Yes. You can upgrade or downgrade your TechCorp Cloud plan at any time. Upgrades take effect immediately and you are billed the prorated difference. Downgrades take effect at the start of your next billing cycle. If you downgrade to a plan with less storage than you currently use, your files are not deleted — but you cannot upload new files until your usage is below the new plan's limit.
+
+Q: Does TechCorp offer discounts for students or nonprofits?
+A: Yes. Students with a valid .edu email address receive 50% off TechCorp Suite and TechCorp Cloud Standard and Pro plans. Registered nonprofits (501c3 or equivalent) receive 40% off all plans. Educational institutions (K-12 and universities) can inquire about volume licensing at enterprise@techcorp.com. Government agencies also have access to special procurement pricing.
+
+TECHNICAL SUPPORT
+
+Q: How do I contact TechCorp support?
+A: TechCorp offers support through several channels: (1) Live chat at support.techcorp.com — available 24/7 for TechCorp Cloud Pro subscribers, and 8 AM to 10 PM Eastern Time for Standard subscribers; (2) Email at support@techcorp.com — response within 24 hours for all users; (3) Phone at 1-800-TECHCORP — Monday through Friday 8 AM to 8 PM Eastern; (4) Community forums at community.techcorp.com — searchable answers from TechCorp experts and other customers.
+
+Q: How do I reset my TechCorp account password?
+A: Go to account.techcorp.com and click "Forgot Password" on the login page. Enter the email address associated with your account and click "Send Reset Link." Check your email (including spam folder) for a reset link valid for 2 hours. If you don't receive the email within 5 minutes, try resending or contact support. For security, TechCorp will also log out all other active sessions when your password is changed.
+
+Q: What should I do if I suspect unauthorized access to my account?
+A: Act immediately: (1) Change your password at account.techcorp.com/security; (2) Enable two-factor authentication (2FA) under Security Settings if not already enabled; (3) Review your active sessions under Security > Active Sessions and end any suspicious sessions; (4) Contact support@techcorp.com to report the incident. TechCorp's security team monitors for suspicious activity and will reach out if they detect unusual access patterns.
+
+TECHCORP SUITE QUESTIONS
+
+Q: Can I use TechCorp Suite offline?
+A: Yes. TechCorp Suite applications (TechDoc, TechSheet, TechSlide) have full offline functionality. Files are automatically synced to TechCorp Cloud when you reconnect to the internet. TechMail requires an internet connection for sending and receiving email, but you can read and compose emails offline and they will sync when reconnected. Calendar events sync automatically when you go online.
+
+Q: Is TechCorp Suite compatible with Microsoft Office files?
+A: Yes. TechCorp Suite can open, edit, and save .docx, .xlsx, and .pptx files with high compatibility. Most formatting, formulas, and features are preserved. Complex macros written in VBA may require adjustment. We recommend using TechCorp's native .tdoc, .tsheet, and .tslide formats for files you primarily edit in TechCorp Suite to ensure the best experience. Free format conversion tools are available at convert.techcorp.com.
+
+Q: How many devices can I use TechCorp Suite on?
+A: TechCorp Suite can be installed on up to 5 devices with a single TechCorp account (Cloud Free, Standard, or Pro plan). This includes Windows, macOS, Linux, iOS, and Android devices. If you exceed 5 devices, you will need to deactivate one before activating a new one. Business customers can purchase additional device licenses through our enterprise portal.
