@@ -32,7 +32,7 @@ You are building a Python script called `hello_ai.py`. When you run it, it will:
 1. Secretly load your API key from a `.env` file (so you never paste your password in code)
 2. Connect to Anthropic's servers (the company that made Claude)
 3. Send this exact message: *"Hello! Can you explain what an AI agent is in 2 sentences, like I'm 10 years old?"*
-4. Print Claude's response in a clear format in your terminal
+4. Print AI Response in a clear format in your terminal
 5. Show how many "tokens" (words) were used — this is how API costs are calculated
 
 Here is what the end result looks like:
@@ -41,11 +41,11 @@ Here is what the end result looks like:
 API key loaded successfully!
 
 ==================================================
-Sending message to Claude...
+Sending message to OpenAI...
 Your question: Hello! Can you explain what an AI agent is in 2 sentences, like I'm 10 years old?
 ==================================================
 
-Claude's Response:
+AI Response:
 --------------------------------------------------
 An AI agent is like a really smart robot helper that can read, think, and do tasks on its own, like searching the internet or writing emails for you. You give it a goal, and it figures out the steps to reach that goal all by itself!
 --------------------------------------------------
@@ -138,20 +138,20 @@ copy .env.example .env
 cp .env.example .env
 ```
 
-Now open `.env` in a text editor and replace `sk-ant-your-key-here` with your real API key.
+Now open `.env` in a text editor and replace `sk-proj-your-key-here` with your real API key.
 
 ### Step 7: Get your API key
 
-1. Go to [https://console.anthropic.com/](https://console.anthropic.com/)
+1. Go to [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 2. Sign up or log in
 3. Click on "API Keys" in the left sidebar
 4. Click "Create Key"
-5. Copy the key (it starts with `sk-ant-`)
+5. Copy the key (it starts with `sk-`)
 6. Paste it into your `.env` file
 
 Your `.env` file should look like this:
 ```
-ANTHROPIC_API_KEY=sk-ant-api03-xxxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_KEY=sk-proj-xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### Step 8: Run the program!
@@ -171,7 +171,7 @@ Let's go through every part of `hello_ai.py` so you understand what each line do
 ```python
 import os
 from dotenv import load_dotenv
-import anthropic
+from openai import OpenAI
 import sys
 ```
 
@@ -180,14 +180,14 @@ When you "import" something in Python, you are saying: "Hey Python, go find this
 
 - `os` — Stands for "operating system". It lets Python read environment variables (secret values stored outside your code).
 - `load_dotenv` — This specific function from the `dotenv` library reads your `.env` file.
-- `anthropic` — The official Python library for talking to Claude. Without this, we'd have to write hundreds of lines of complex networking code ourselves.
+- `openai` — The official Python library for talking to OpenAI models. Without this, we'd have to write hundreds of lines of complex networking code ourselves.
 - `sys` — Gives us `sys.exit()` which lets us stop the program if something goes wrong.
 
 ### Part 2: Loading the API Key
 
 ```python
 load_dotenv()
-api_key = os.getenv("ANTHROPIC_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
 ```
 
 **What is a `.env` file?**
@@ -197,9 +197,9 @@ SECRET_NAME=secret_value
 ```
 
 **Why not just put the API key directly in the code?**
-If you put your API key directly in the code (`api_key = "sk-ant-abc123"`), anyone who sees your code (on GitHub, for example) can steal your key and use it. You would get charged for their usage! The `.env` file is kept separate and not shared.
+If you put your API key directly in the code (`api_key = "sk-proj-abc123"`), anyone who sees your code (on GitHub, for example) can steal your key and use it. You would get charged for their usage! The `.env` file is kept separate and not shared.
 
-`load_dotenv()` reads the `.env` file. After that, `os.getenv("ANTHROPIC_API_KEY")` retrieves the value.
+`load_dotenv()` reads the `.env` file. After that, `os.getenv("OPENAI_API_KEY")` retrieves the value.
 
 ### Part 3: Safety Check
 
@@ -217,16 +217,16 @@ This is called "defensive programming" — you check for problems early rather t
 ### Part 4: Creating the Client
 
 ```python
-client = anthropic.Anthropic(api_key=api_key)
+client = OpenAI(api_key=api_key)
 ```
 
-This creates an "Anthropic client object". Think of it like dialing a phone number. The `client` variable now holds an open connection to Anthropic's service, ready to send and receive messages.
+This creates an "OpenAI client object". Think of it like dialing a phone number. The `client` variable now holds an open connection to OpenAI's service, ready to send and receive messages.
 
 ### Part 5: Sending the Message
 
 ```python
-response = client.messages.create(
-    model="claude-opus-4-6",
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
     max_tokens=1024,
     messages=[
         {
@@ -242,7 +242,7 @@ This is the core API call. Breaking it down:
 | Parameter | What it does |
 |-----------|--------------|
 | `model` | Which AI model to use. Like choosing which expert you want to talk to. |
-| `max_tokens` | The maximum length of Claude's response. 1 token ≈ 0.75 words. |
+| `max_tokens` | The maximum length of the model's response. 1 token ≈ 0.75 words. |
 | `messages` | A list of the conversation so far. Each message has a "role" and "content". |
 | `role: "user"` | Marks this message as coming from you (the human). |
 | `content` | The actual text of your message. |
@@ -250,15 +250,15 @@ This is the core API call. Breaking it down:
 ### Part 6: Reading the Response
 
 ```python
-answer_text = response.content[0].text
+answer_text = response.choices[0].message.content
 ```
 
 The `response` object has this structure:
 ```
 response
-  └── content  (a list)
+  └── choices  (a list)
         └── [0]  (the first item in the list)
-              └── .text  (the actual text string)
+              └── .message.content  (the actual text string)
 ```
 
 We use `[0]` because Python lists start counting at 0. The first item is always at index 0.
@@ -266,8 +266,8 @@ We use `[0]` because Python lists start counting at 0. The first item is always 
 ### Part 7: Token Usage
 
 ```python
-print(f"  Input tokens  : {response.usage.input_tokens}")
-print(f"  Output tokens : {response.usage.output_tokens}")
+print(f"  Input tokens  : {response.usage.prompt_tokens}")
+print(f"  Output tokens : {response.usage.completion_tokens}")
 ```
 
 Every API call costs money based on tokens. Understanding token usage helps you:
@@ -285,11 +285,11 @@ When you run `python hello_ai.py` successfully, you should see something like th
 API key loaded successfully!
 
 ==================================================
-Sending message to Claude...
+Sending message to OpenAI...
 Your question: Hello! Can you explain what an AI agent is in 2 sentences, like I'm 10 years old?
 ==================================================
 
-Claude's Response:
+AI Response:
 --------------------------------------------------
 An AI agent is like a really smart helper that can think on its own and do tasks for you, like searching the internet, writing emails, or solving problems step by step. You give it a goal, and it figures out how to reach that goal all by itself without you having to tell it every tiny thing to do!
 --------------------------------------------------
@@ -302,7 +302,7 @@ Token Usage:
 Done! Your first AI call was a success!
 ```
 
-**Note:** Claude's exact response will vary each time you run it. That's normal — AI models don't give the exact same answer twice, just like a person wouldn't word things exactly the same twice.
+**Note:** The exact response will vary each time you run it. That's normal — AI models don't give the exact same answer twice, just like a person wouldn't word things exactly the same twice.
 
 ---
 
@@ -311,13 +311,13 @@ Done! Your first AI call was a success!
 Companies use this exact technique (calling an AI API from code) in many real products:
 
 ### Example 1: Automated Customer Support at Scale
-A company like an online bank has millions of customers sending emails every day asking "What's my balance?", "How do I reset my password?", "Why was I charged twice?" Instead of hiring 1,000 support agents, they write code that reads each email, sends it to Claude, and lets Claude write a helpful first-response. Human agents only handle the tricky ones. This saves millions of dollars per year.
+A company like an online bank has millions of customers sending emails every day asking "What's my balance?", "How do I reset my password?", "Why was I charged twice?" Instead of hiring 1,000 support agents, they write code that reads each email, sends it to an AI model, and lets the model write a helpful first-response. Human agents only handle the tricky ones. This saves millions of dollars per year.
 
 ### Example 2: Internal Knowledge Tools at Tech Companies
-Large tech companies have thousands of internal documents, wikis, runbooks, and policies. New employees spend weeks just finding information. Engineers build tools where employees can type a question and the tool uses Claude to find and summarize the relevant documents instantly. This is exactly what you will build in Project 3 (RAG systems).
+Large tech companies have thousands of internal documents, wikis, runbooks, and policies. New employees spend weeks just finding information. Engineers build tools where employees can type a question and the tool uses an AI model to find and summarize the relevant documents instantly. This is exactly what you will build in Project 3 (RAG systems).
 
 ### Example 3: AI-Powered Code Review
-Some companies use Claude to do a first pass of code review on every pull request (when a developer submits new code). The AI checks for common bugs, security issues, and style problems, and leaves comments. This catches obvious problems before human reviewers even look, saving senior developer time.
+Some companies use AI models to do a first pass of code review on every pull request (when a developer submits new code). The AI checks for common bugs, security issues, and style problems, and leaves comments. This catches obvious problems before human reviewers even look, saving senior developer time.
 
 ---
 
@@ -330,7 +330,7 @@ Instead of a hardcoded question, let the user type their own question:
 
 ```python
 # Replace the hardcoded question line with:
-my_question = input("What would you like to ask Claude? ")
+my_question = input("What would you like to ask the model? ")
 ```
 
 Now your program becomes an interactive chatbot!
@@ -347,7 +347,7 @@ while True:
 ```
 
 ### Idea 3: Save Conversations to a File
-After getting Claude's response, save both the question and answer to a text file:
+After getting the model's response, save both the question and answer to a text file:
 
 ```python
 with open("conversation_log.txt", "a") as f:  # "a" means "append" (add to end, don't overwrite)
@@ -366,9 +366,9 @@ with open("conversation_log.txt", "a") as f:  # "a" means "append" (add to end, 
 | API Key | A secret password that identifies you to an external service |
 | `.env` file | A file that stores secrets outside your code so they don't accidentally get shared |
 | `python-dotenv` | A Python library that reads `.env` files and loads them into Python |
-| `anthropic` library | The official Python library for talking to Claude |
+| `openai` library | The official Python library for talking to OpenAI models |
 | Client object | A Python object that holds an open connection to a service, ready to make requests |
-| `messages.create()` | The function that sends your message to Claude and waits for a response |
+| `chat.completions.create()` | The function that sends your message to the model and waits for a response |
 | Tokens | The unit of measurement for text in AI models (roughly 0.75 words per token) |
 | `max_tokens` | A limit on how long the AI's response can be |
 | f-strings | Python's way of inserting variable values into text strings using `f"..."` syntax |
@@ -386,7 +386,7 @@ Test yourself! Try to answer from memory before revealing the answers.
 <details>
 <summary>Click to reveal the answer</summary>
 
-**Answer:** Security. If you put your API key directly in your code (`api_key = "sk-ant-abc123"`), anyone who reads your code — for example if you accidentally push it to GitHub — can see and steal your key. They could then use it to call the API and you would be charged for their usage. The `.env` file is kept out of version control (added to `.gitignore`) so it's never shared. The code only contains the variable name, not the actual secret value.
+**Answer:** Security. If you put your API key directly in your code (`api_key = "sk-proj-abc123"`), anyone who reads your code — for example if you accidentally push it to GitHub — can see and steal your key. They could then use it to call the API and you would be charged for their usage. The `.env` file is kept out of version control (added to `.gitignore`) so it's never shared. The code only contains the variable name, not the actual secret value.
 
 </details>
 
@@ -397,17 +397,19 @@ Test yourself! Try to answer from memory before revealing the answers.
 <details>
 <summary>Click to reveal the answer</summary>
 
-**Answer:** `max_tokens` sets the maximum length of Claude's response. Each "token" is roughly 0.75 words (so 1024 tokens ≈ about 768 words). If you set `max_tokens=10`, Claude would stop writing after about 7-8 words, even if it was in the middle of a sentence. It's a hard cut-off. You set this to control costs (longer responses use more tokens and cost more money) and to prevent runaway responses that are unexpectedly long.
+**Answer:** `max_tokens` sets the maximum length of the model's response. Each "token" is roughly 0.75 words (so 1024 tokens ≈ about 768 words). If you set `max_tokens=10`, Claude would stop writing after about 7-8 words, even if it was in the middle of a sentence. It's a hard cut-off. You set this to control costs (longer responses use more tokens and cost more money) and to prevent runaway responses that are unexpectedly long.
 
 </details>
 
 ---
 
-**Question 3:** What does `response.content[0].text` mean? Why the `[0]`?
+**Question 3:** What does `response.choices[0].message.content` mean? Why the `[0]`?
 
 <details>
 <summary>Click to reveal the answer</summary>
 
-**Answer:** `response` is the object that came back from the API call. It contains a field called `content`, which is a Python list (a collection of items). Even if Claude only sends one message back, it's still wrapped in a list. `[0]` means "give me the first item in this list" — Python counts list positions starting from 0, not 1. So the first item is always at index `[0]`. Then `.text` gets the actual text string from that item. The full chain `response.content[0].text` means: "From the response, get the content list, take the first item, and give me its text."
+**Answer:** `response` is the object that came back from the API call. It contains a field called `content`, which is a Python list (a collection of items). Even if Claude only sends one message back, it's still wrapped in a list. `[0]` means "give me the first item in this list" — Python counts list positions starting from 0, not 1. So the first item is always at index `[0]`. Then `.text` gets the actual text string from that item. The full chain `response.choices[0].message.content` means: "From the response, get the content list, take the first item, and give me its text."
 
 </details>
+
+
