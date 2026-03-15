@@ -14,19 +14,20 @@ import argparse                 # "argparse" lets us handle command-line argumen
                                 # This is a standard Python library — no need to install it.
 
 from dotenv import load_dotenv  # Reads our .env file and loads the API key into Python's memory.
-import anthropic                # The official library to talk to Claude AI.
+from openai import OpenAI       # The OpenAI-compatible library — works with Groq too.
 
 
 # ── Step 1: Load environment variables from .env file ───────────────────────
 
 load_dotenv()  # Read the .env file. After this, os.getenv() can find our API key.
 
-api_key = os.getenv("ANTHROPIC_API_KEY")  # Grab the API key value from environment variables.
+api_key = os.getenv("GROQ_API_KEY")  # Grab the Groq API key from environment variables.
 
-if not api_key:                            # Safety check: if there's no API key, stop now.
-    print("ERROR: ANTHROPIC_API_KEY not found in environment.")
+if not api_key:                       # Safety check: if there's no API key, stop now.
+    print("ERROR: GROQ_API_KEY not found in environment.")
     print("Please create a .env file with your key. See .env.example for the format.")
-    sys.exit(1)                            # Exit the program with error code 1.
+    print("Get your free key at: https://console.groq.com/keys")
+    sys.exit(1)                       # Exit the program with error code 1.
 
 
 # ── Step 2: Set up command-line argument parsing ────────────────────────────
@@ -132,10 +133,12 @@ if not input_text or input_text.strip() == "":
     sys.exit(1)  # Exit if there's nothing to summarize.
 
 
-# ── Step 4: Create the Anthropic client ─────────────────────────────────────
+# ── Step 4: Create the Groq client ──────────────────────────────────────────
 
-client = anthropic.Anthropic(api_key=api_key)  # Open a connection to the Anthropic API.
-                                                 # This client object lets us send messages to Claude.
+client = OpenAI(                                 # Groq is OpenAI-compatible, so we use the same SDK.
+    api_key=api_key,                             # Our Groq API key.
+    base_url="https://api.groq.com/openai/v1"   # Point the client at Groq's servers instead of OpenAI.
+)
 
 
 # ── Step 5: Define the system prompt ────────────────────────────────────────
@@ -180,24 +183,31 @@ user_message = f"""Please summarize the following text:
 
 # ── Step 7: Send to Claude and get the summary ──────────────────────────────
 
-print("\nSending to Claude for summarization...")  # Status message so the user knows it's working.
+model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
+# os.getenv("GROQ_MODEL", "llama-3.1-8b-instant") tries to read GROQ_MODEL from .env.
+# If not set, defaults to "llama-3.1-8b-instant" — fast, free, and capable.
+# Other good free Groq models: "llama-3.3-70b-versatile", "mixtral-8x7b-32768"
+
+print("\nSending to Groq for summarization...")  # Status message so the user knows it's working.
 print("Please wait...\n")
 
-response = client.messages.create(   # Send the message to Claude. This waits for a response.
-    model="claude-opus-4-6",          # Which AI model to use.
-    max_tokens=1024,                   # Max length of Claude's response (in tokens).
-    system=system_prompt,              # The system prompt — Claude's role and instructions.
-                                        # This is separate from the "messages" list.
-    messages=[                          # The conversation messages.
+response = client.chat.completions.create(  # Send the message to Groq. Same API shape as OpenAI.
+    model=model,                             # Which AI model to use.
+    max_tokens=1024,                         # Max length of the response (in tokens).
+    messages=[                               # The conversation messages.
         {
-            "role": "user",              # This message is from the user (us).
-            "content": user_message      # The actual text: instruction + the text to summarize.
+            "role": "system",                # System message sets the AI's role/instructions.
+            "content": system_prompt         # The system prompt we defined above.
+        },
+        {
+            "role": "user",                  # This message is from us (the user).
+            "content": user_message          # The actual text: instruction + the text to summarize.
         }
     ]
 )
 
-summary_text = response.content[0].text  # Extract Claude's response text.
-                                           # response.content is a list; [0] gets the first item; .text gets the string.
+summary_text = response.choices[0].message.content  # Extract the response text.
+                                                      # Same structure as OpenAI: choices[0].message.content
 
 
 # ── Step 8: Print the summary nicely ────────────────────────────────────────
@@ -208,7 +218,7 @@ print("=" * 60)                          # Another border.
 print(summary_text)                      # Print Claude's full formatted response.
 print("=" * 60)                          # Bottom border.
 
-print(f"\nTokens used: {response.usage.input_tokens} input, {response.usage.output_tokens} output")
+print(f"\nTokens used: {response.usage.prompt_tokens} input, {response.usage.completion_tokens} output")
 # Show token usage so students can see the cost pattern.
 
 
@@ -227,7 +237,7 @@ Original source: {args.file if args.file else 'Direct text input'}
 {summary_text}
 
 {'=' * 60}
-Tokens used: {response.usage.input_tokens} input, {response.usage.output_tokens} output
+Tokens used: {response.usage.prompt_tokens} input, {response.usage.completion_tokens} output
 """
     # This builds the full text we'll save to the file.
     # We include metadata like the source and token count.
